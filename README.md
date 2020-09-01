@@ -12,6 +12,6 @@
 - MealDB API - [Click here](https://www.themealdb.com/api.php)
 
 ### Screen Shots
-1. ![Home Page](/screenshot/1.png)
-2. ![Details Page - 1](/screenshot/2.png)
-3. ![Details Page - 2](/screenshot/3.png)
+![Home Page](/screenshot/1.png)
+![Details Page - 1](/screenshot/2.png)
+![Details Page - 2](/screenshot/3.png)
