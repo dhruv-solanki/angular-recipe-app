@@ -1,0 +1,55 @@
+<div class="container mt-5" *ngIf="!fullRecipe; else recipe">
+    <h5>Recipe is loading</h5>
+</div>
+
+<ng-template #recipe> 
+    <div class="container mt-5">
+        <div class="row bg-light p-3 rounded">
+            <div class="col-md-4">
+                <img src="{{ fullRecipe.image }}" alt="recipe" class="img-fluid rounded">
+            </div>
+            <div class="col-md-8">
+                <h6 class="font-weight-bold m-0">Recipe Name</h6>
+                <h5 class="mb-3">{{ fullRecipe.name }}</h5>
+
+                <h6 class="font-weight-bold m-0">Category</h6>
+                <h5 class="mb-3">{{ fullRecipe.category }}</h5>
+
+                <h6 class="font-weight-bold m-0">Country</h6>
+                <h5 class="mb-3">{{ fullRecipe.country }}</h5>
+
+                <p>
+                    <a href="{{ fullRecipe.youtubeLink }}" class="btn btn-info">
+                        Watch on Youtube
+                    </a>
+                </p>
+
+                <p *ngIf="fullRecipe.blogLink">
+                    <a href="{{ fullRecipe.blogLink }}" class="btn btn-dark">
+                        Read on Blog
+                    </a>
+                </p>
+            </div>
+        </div>
+        <p class="mt-5"></p>
+        <div class="row">
+            <div class="col-md-5">
+                <div class="bg-light p-3 rounded">
+                    <h6 class="font-weight-bold">Ingredients</h6>
+                    <div class="d-flex justify-content-between" *ngFor="let ingredient of fullRecipe.ingredients; let i = index">
+                        <p>{{ ingredient }}</p>
+                        <p>{{ fullRecipe.measures[i] }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="bg-light p-3 rounded">
+                    <h6 class="font-weight-bold">Instructions</h6>
+                    <div *ngFor="let instruction of fullRecipe.instructions">
+                        <p class="mb-1">{{ instruction + '.' }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
