@@ -13,5 +13,7 @@
 
 ### Screen Shots
 ![Home Page](/screenshot/1.png)
+
 ![Details Page - 1](/screenshot/2.png)
+
 ![Details Page - 2](/screenshot/3.png)
